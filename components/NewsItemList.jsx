@@ -1,6 +1,5 @@
-import { Fragment } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import slugify from "slugify";
 
 const NewsItemList = ({ items }) => {
   return (
@@ -8,13 +7,21 @@ const NewsItemList = ({ items }) => {
       <ul className="news-list">
         {items ? (
           items.map((newsItem) => (
-            <Fragment key={`news-list-item-key-${newsItem.id}`}>
-              <div className="news-list-item">
-                <h2>{newsItem.title}</h2>
-                <p>{newsItem.body}</p>
-                <Link href={`/news/${slugify(newsItem.title)}`}>Read More</Link>
+            <li
+              key={`news-list-item-key-${newsItem.id}`}
+              className="news-list-item"
+            >
+              <div className="news-list-item--img">
+                <Link href={`/news/${newsItem.slug}`}>
+                  <Image
+                    src={`/images/news/${newsItem.image}`}
+                    alt={newsItem.title}
+                    fill
+                  />
+                </Link>
               </div>
-            </Fragment>
+              <span>{newsItem.title}</span>
+            </li>
           ))
         ) : (
           <div>No current news items</div>

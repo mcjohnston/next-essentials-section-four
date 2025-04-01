@@ -127,7 +127,8 @@ ul {
   padding: 0 0 1rem 0;
 }
 
-.news-list a img {
+.news-list-item--img {
+  position: relative;
   width: 100%;
   height: 14rem;
   object-fit: cover;

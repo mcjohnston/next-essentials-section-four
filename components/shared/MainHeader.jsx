@@ -16,14 +16,19 @@ export default function MainHeader() {
             />
           </Link>
         </div>
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/news">News</Link>
-          </li>
-        </ul>
+        <nav>
+          <ul>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/news">News</Link>
+            </li>
+            <li>
+              <Link href="/archive">Archives</Link>
+            </li>
+          </ul>
+        </nav>
       </header>
     </>
   );
