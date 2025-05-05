@@ -1,6 +1,7 @@
 import Image from "next/image";
 import LogoImage from "@/assets/logo.jpg";
 import Link from "next/link";
+import NavLink from "./NavLink";
 
 export default function MainHeader() {
   return (
@@ -22,10 +23,10 @@ export default function MainHeader() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/news">News</Link>
+              <NavLink href="/news">News</NavLink>
             </li>
             <li>
-              <Link href="/archive">Archives</Link>
+              <NavLink href="/archive">Archives</NavLink>
             </li>
           </ul>
         </nav>
